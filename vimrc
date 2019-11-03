@@ -19,13 +19,13 @@ map <C-l> <C-W>l
 map<F8> :call C()<CR>
 func! C()
     exec "w"
-    exec "!gcc -std=c90 % -o %< && ./%<"
+    exec "!gcc -std=c89 % -o %< && ./%<"
 endfunc 
-" map<F9> :call CPP()<CR>
-" func! CPP()
-"     exec "w"
-"     exec "!g++ -O2 -std=c++11 % -o %< && ./%<"
-" endfunc
+map<F9> :call CPP()<CR>
+func! CPP()
+    exec "w"
+    exec "!g++ -O2 -std=c++11 % -o %< && ./%<"
+endfunc
 
 
 " 插件管理(vim-plug)
@@ -35,6 +35,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'scrooloose/nerdtree'
     Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdcommenter'
+    Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " NERDTree
@@ -46,3 +47,5 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 
+" vim-easymotion
+nmap s <Plug>(easymotion-s2)
