@@ -8,8 +8,8 @@ set softtabstop=4
 set expandtab
 set cindent
 set mouse=a
-
 set scrolloff=5
+colorscheme elflord
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
