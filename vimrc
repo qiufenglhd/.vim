@@ -32,9 +32,9 @@ endfunc
 call plug#begin('~/.vim/plugged')
     Plug 'mhinz/vim-startify'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'scrooloose/nerdtree'
+    Plug 'preservim/nerdtree'
     Plug 'vim-airline/vim-airline'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'preservim/nerdcommenter'
     Plug 'easymotion/vim-easymotion'
 call plug#end()
 
