@@ -19,7 +19,7 @@ map <C-l> <C-W>l
 map<F8> :call C()<CR>
 func! C()
     exec "w"
-    exec "!gcc -std=c89 % -o %< && ./%<"
+    exec "!gcc -std=c99 % -o %< && ./%<"
 endfunc 
 map<F9> :call CPP()<CR>
 func! CPP()
