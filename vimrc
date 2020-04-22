@@ -10,6 +10,8 @@ set cindent
 set mouse=a
 set scrolloff=5
 
+colorscheme dracula
+
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -36,6 +38,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'preservim/nerdcommenter'
     Plug 'easymotion/vim-easymotion'
+    Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " NERDTree
