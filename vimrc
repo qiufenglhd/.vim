@@ -19,12 +19,12 @@ map <C-l> <C-W>l
 map<F8> :call C()<CR>
 func! C()
     exec "w"
-    exec "!gcc -std=c99 % -o %< && ./%<"
+    exec "!clang -std=c99 % -o %< && ./%<"
 endfunc 
 map<F9> :call CPP()<CR>
 func! CPP()
     exec "w"
-    exec "!g++ -O2 -std=c++11 % -o %< && ./%<"
+    exec "!clang++ -O2 -std=c++11 % -o %< && ./%<"
 endfunc
 
 
