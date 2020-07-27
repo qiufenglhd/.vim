@@ -1,11 +1,11 @@
 set nu
 syntax on
 set smarttab
-set autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set autoindent
 set cindent
 set mouse=a
 set scrolloff=5
