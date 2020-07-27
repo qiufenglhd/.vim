@@ -15,17 +15,18 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" 简单配置C/C++
-map<F8> :call C()<CR>
-func! C()
+" 简单配置C/C++/Python
+map<F8> :call F()<CR>
+func! F()
     exec "w"
-    exec "!clang -std=c99 % -o %< && ./%<"
+    if &filetype == "c"
+        exec "!clang -std=c99 % -o %< && ./%<"
+    elseif &filetype == "cpp"
+        exec "!clang++ -O2 -std=c++11 % -o %< && ./%<"
+    elseif &filetype == "python"
+        exec "!python -u %"
+    endif
 endfunc 
-map<F9> :call CPP()<CR>
-func! CPP()
-    exec "w"
-    exec "!clang++ -O2 -std=c++11 % -o %< && ./%<"
-endfunc
 
 
 " 插件管理(vim-plug)
