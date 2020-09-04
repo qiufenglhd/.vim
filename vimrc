@@ -39,7 +39,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Theme
-colorscheme dracula
+" colorscheme elflord
 
 " NERDTree
 " autocmd vimenter * NERDTree
