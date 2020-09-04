@@ -36,7 +36,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'preservim/nerdcommenter'
     Plug 'easymotion/vim-easymotion'
-    Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 " Theme
