@@ -24,7 +24,7 @@ func! F()
     elseif &filetype == "cpp"
         exec "!clang++ -O2 -std=c++11 % -o %< && ./%<"
     elseif &filetype == "python"
-        exec "!python -u %"
+        exec "!python3 -u %"
     endif
 endfunc 
 
