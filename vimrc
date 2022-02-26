@@ -16,13 +16,13 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " 简单配置C/C++/Python
-map<F8> :call F()<CR>
+map<F9> :call F()<CR>
 func! F()
     exec "w"
     if &filetype == "c"
-        exec "!clang -std=c99 % -o %< && ./%<"
+        exec "!gcc -std=c99 % -o %< && ./%<"
     elseif &filetype == "cpp"
-        exec "!clang++ -O2 -std=c++11 % -o %< && ./%<"
+        exec "!g++ -O2 -std=c++11 % -o %< && ./%<"
     elseif &filetype == "python"
         exec "!python3 -u %"
     endif
